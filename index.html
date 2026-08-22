@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#F6F6FA" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#100F1E" media="(prefers-color-scheme: dark)" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Roamvas" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <script>
+      (function () {
+        try {
+          var raw = localStorage.getItem('roamvas-settings');
+          var theme = raw ? (JSON.parse(raw).state || {}).theme : null;
+          if (!theme) {
+            var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            theme = systemDark ? 'dark' : 'light';
+          }
+          // Mirrors src/lib/themes.ts's id -> className mapping — this runs
+          // before any bundled JS (so it can't import that file directly),
+          // and needs to apply the *specific* named variant's class, not
+          // just plain light/dark, or the very first paint uses the wrong
+          // theme's colors until React mounts and corrects it a moment
+          // later — visible as a flash/snap of the wrong colors on load.
+          var classMap = {
+            'light': '',
+            'light-sand': 'theme-sand',
+            'light-mint': 'theme-mint',
+            'light-lavender': 'theme-lavender',
+            'light-coral': 'theme-coral',
+            'light-sky': 'theme-sky',
+            'dark': 'dark',
+            'dark-graphite': 'dark theme-graphite',
+            'dark-emerald': 'dark theme-emerald',
+            'dark-plum': 'dark theme-plum',
+            'dark-wine': 'dark theme-wine',
+            'dark-desert': 'dark theme-desert'
+          };
+          var classes = Object.prototype.hasOwnProperty.call(classMap, theme) ? classMap[theme] : '';
+          if (classes) {
+            classes.split(' ').forEach(function (c) { document.documentElement.classList.add(c); });
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <title>Roamvas — Конструктор плана путешествия</title>
+    <script type="module" crossorigin src="/assets/index-oNhhAWCm.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Cki1kuFJ.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
