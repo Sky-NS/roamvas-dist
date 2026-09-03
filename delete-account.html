@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Delete your Roamvas account</title>
+<meta name="description" content="How to delete your Roamvas account and what happens to your data." />
+<link rel="icon" href="/favicon.svg" />
+<!--
+  Отдельная страница, а не маршрут внутри приложения — так требует
+  Google Play: ссылка на удаление вписывается в Play Console и должна
+  открываться сама по себе.
+
+  Специально без JavaScript, без сборки и без зависимостей: если
+  приложение сломается или не загрузится, страница всё равно откроется.
+  Ревьюер Google проверяет её обычным запросом, не запуская приложение.
+
+  Лежит в public/, поэтому Vite кладёт её в dist/ как есть, и она
+  доступна по адресу roamvas.app/delete-account.html
+-->
+<style>
+  :root {
+    --bg: #f7f7f5; --surface: #ffffff; --ink: #1a1a1a; --soft: #5a5a5a;
+    --line: #e3e3df; --brand: #2f6f4e; --danger: #b3261e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a; --surface: #1c1f24; --ink: #f0f0ee; --soft: #a8a8a4;
+      --line: #2b2f36; --brand: #7fc9a0; --danger: #f2b8b5;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 32px 20px 64px; background: var(--bg); color: var(--ink);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  main { max-width: 680px; margin: 0 auto; }
+  h1 { font-size: 26px; line-height: 1.25; margin: 0 0 8px; }
+  h2 { font-size: 19px; margin: 32px 0 10px; }
+  p, li { color: var(--soft); }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 7px; }
+  strong { color: var(--ink); }
+  a { color: var(--brand); }
+  .lead { font-size: 17px; color: var(--ink); }
+  .card {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 14px; padding: 18px 20px; margin: 0 0 18px;
+  }
+  .card h2 { margin-top: 0; }
+  .steps { counter-reset: s; list-style: none; padding-left: 0; }
+  .steps li { counter-increment: s; padding-left: 34px; position: relative; }
+  .steps li::before {
+    content: counter(s); position: absolute; left: 0; top: 1px;
+    width: 23px; height: 23px; border-radius: 50%;
+    background: var(--brand); color: var(--bg);
+    font-size: 13px; font-weight: 700; display: grid; place-items: center;
+  }
+  .warn { border-left: 3px solid var(--danger); padding-left: 14px; }
+  .warn strong { color: var(--danger); }
+  footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>Delete your Roamvas account</h1>
+  <p class="lead">This page explains how to delete your account in <strong>Roamvas</strong>, the AI travel-planning app, and exactly what happens to your data.</p>
+
+  <div class="card">
+    <h2>In the app — takes a minute</h2>
+    <ol class="steps">
+      <li>Open Roamvas and sign in.</li>
+      <li>Go to <strong>Settings</strong>.</li>
+      <li>Open <strong>More</strong> → <strong>Delete account</strong>.</li>
+      <li>Enter your password to confirm.</li>
+    </ol>
+    <p>Deletion happens immediately. It cannot be undone.</p>
+  </div>
+
+  <div class="card">
+    <h2>By email — if you cannot sign in</h2>
+    <p>Write to <a href="mailto:support@roamvas.app?subject=Account%20deletion%20request">support@roamvas.app</a> from the email address linked to your account, with the subject <em>Account deletion request</em>, and include your username.</p>
+    <p>We reply within 30 days, usually much sooner. We may ask you to confirm your identity if the request does not come from the address on the account.</p>
+  </div>
+
+  <h2>What is deleted</h2>
+  <p>Everything below is erased permanently and immediately:</p>
+  <ul>
+    <li>Your account, username and email address</li>
+    <li>Your password hash and all active sessions on every device</li>
+    <li>All travel plans that nobody has saved to their favourites — including the photos attached to them</li>
+    <li>Your views, likes, dislikes and favourites in the public feed</li>
+    <li>Moderation records and any warnings on the account</li>
+    <li>Promo codes you redeemed</li>
+  </ul>
+
+  <h2>What is kept, and why</h2>
+  <div class="warn">
+    <p><strong>One exception.</strong> A plan you published that another user has already saved to their favourites is not deleted — deleting it would remove it from their account too, and that is not yours to take away.</p>
+    <p>Such a plan is removed from the public feed and stays visible only to the people who saved it. Your account is unlinked from it: your name is no longer shown or stored alongside it.</p>
+    <p>If you want those removed as well, unpublish or delete the plans <em>before</em> deleting your account, or ask us at <a href="mailto:support@roamvas.app">support@roamvas.app</a>.</p>
+  </div>
+
+  <h2>Retention period</h2>
+  <p>There is no retention period for the data listed above under “What is deleted” — it is removed at the moment of deletion, not queued or frozen. Routine infrastructure backups may hold residual copies for up to 30 days, after which they are overwritten.</p>
+  <p>We keep no billing records: subscriptions are handled entirely by Apple and Google, who never pass payment details to us.</p>
+
+  <h2>Data stored only on your device</h2>
+  <p>Your profile picture, PIN and biometric setting never leave your device — they are not on our servers, so there is nothing for us to delete. They are removed when you delete the account, sign out, or uninstall the app.</p>
+
+  <footer>
+    <p>Full details: <a href="https://roamvas.app/#/legal/privacy">Privacy Policy</a> · <a href="https://roamvas.app/#/legal/terms">Terms of Use</a></p>
+    <p>Questions: <a href="mailto:support@roamvas.app">support@roamvas.app</a></p>
+  </footer>
+
+</main>
+</body>
+</html>
