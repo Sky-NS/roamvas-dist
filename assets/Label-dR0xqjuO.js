@@ -1,0 +1,1 @@
+import{r as t,j as r,a as i}from"./index-Dlo3Hmi3.js";const o=t.forwardRef(({className:a,...e},s)=>r.jsx("label",{ref:s,className:i("text-xs font-semibold uppercase tracking-wider text-ink-faint leading-none peer-disabled:opacity-70",a),...e}));o.displayName="Label";export{o as L};

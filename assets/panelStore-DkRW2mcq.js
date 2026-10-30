@@ -1,0 +1,1 @@
+import{aE as s,aF as r}from"./index-Dlo3Hmi3.js";const o=s()(r(a=>({panelToken:"",role:"",daysUntilExpiry:null,setPanelSession:({panelToken:e,role:n,daysUntilExpiry:l})=>a({panelToken:e,role:n,daysUntilExpiry:l}),updateDaysUntilExpiry:e=>a({daysUntilExpiry:e}),clearPanelSession:()=>a({panelToken:"",role:"",daysUntilExpiry:null})}),{name:"roamvas-panel"}));export{o as u};
