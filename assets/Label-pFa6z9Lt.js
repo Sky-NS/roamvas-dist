@@ -1,0 +1,1 @@
+import{k as t,j as r,h as i}from"./index-DJJS3dTG.js";const o=t.forwardRef(({className:e,...a},s)=>r.jsx("label",{ref:s,className:i("text-xs font-semibold uppercase tracking-wider text-ink-faint leading-none peer-disabled:opacity-70",e),...a}));o.displayName="Label";export{o as L};
