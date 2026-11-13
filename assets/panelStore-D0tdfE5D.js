@@ -1,0 +1,1 @@
+import{b0 as s,b1 as r}from"./index-CzmAEf9o.js";const o=s()(r(e=>({panelToken:"",role:"",daysUntilExpiry:null,setPanelSession:({panelToken:a,role:n,daysUntilExpiry:l})=>e({panelToken:a,role:n,daysUntilExpiry:l}),updateDaysUntilExpiry:a=>e({daysUntilExpiry:a}),clearPanelSession:()=>e({panelToken:"",role:"",daysUntilExpiry:null})}),{name:"roamvas-panel"}));export{o as u};
