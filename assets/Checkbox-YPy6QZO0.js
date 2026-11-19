@@ -1,0 +1,1 @@
+import{k as o,j as s,h as n}from"./index-CRCwTrHP.js";const t=o.forwardRef(({className:r,...a},e)=>s.jsx("input",{ref:e,type:"checkbox",className:n("h-4 w-4 rounded border-ink-faint text-brand focus:ring-2 focus:ring-brand/30 accent-brand",r),...a}));t.displayName="Checkbox";export{t as C};

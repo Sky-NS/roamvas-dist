@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Реквизиты продавца — Roamvas</title>
+<meta name="description" content="Реквизиты и контакты продавца, что продаётся, цены, способ оплаты и получения, возврат." />
+<link rel="icon" href="/favicon.svg" />
+<!--
+  Страница для оплаты через ЮKassa (cloudflare-backend/alt-billing.js):
+  реквизиты самозанятого, контакты, что продаётся, цены в рублях, как
+  получить оплаченное и как вернуть деньги. ЮKassa проверяет её при
+  подключении магазина, ссылка — в окне «Оплата картой или через СБП» на
+  странице тарифов («Реквизиты продавца»). Как и delete-account.html — без JavaScript и сборки.
+  Цены — те же, что ALT_PRICES_RUB в alt-billing.js: меняете там — меняйте здесь.
+-->
+<style>
+  :root {
+    --bg: #f7f7f5; --surface: #ffffff; --ink: #1a1a1a; --soft: #5a5a5a;
+    --line: #e3e3df; --brand: #2f6f4e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a; --surface: #1c1f24; --ink: #f0f0ee; --soft: #a8a8a4;
+      --line: #2b2f36; --brand: #7fc9a0;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 32px 20px 64px; background: var(--bg); color: var(--ink);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  main { max-width: 680px; margin: 0 auto; }
+  h1 { font-size: 26px; line-height: 1.25; margin: 0 0 8px; }
+  h2 { font-size: 19px; margin: 0 0 10px; }
+  p, li, td { color: var(--soft); }
+  p { margin: 0 0 12px; }
+  ul { margin: 0 0 12px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  strong { color: var(--ink); }
+  a { color: var(--brand); }
+  .card {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 14px; padding: 18px 20px; margin: 0 0 16px;
+  }
+  table { width: 100%; border-collapse: collapse; }
+  td { padding: 6px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  td:last-child { text-align: right; color: var(--ink); white-space: nowrap; padding-left: 12px; }
+  tr:last-child td { border-bottom: 0; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Реквизиты продавца</h1>
+  <p>Roamvas — сервис для планирования путешествий с помощью ИИ: сайт <a href="https://roamvas.app">roamvas.app</a> и приложение для Android.</p>
+
+  <div class="card">
+    <h2>Продавец</h2>
+    <p><strong>Анохин Никита Геннадьевич</strong><br />
+    Плательщик налога на профессиональный доход (самозанятый)<br />
+    ИНН <strong>502481968720</strong></p>
+    <p>Электронная почта: <a href="mailto:support@roamvas.app">support@roamvas.app</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Что продаётся и цены</h2>
+    <p>Доступ к платным тарифам сервиса Roamvas на оплаченный срок. Это цифровая услуга: физических товаров и доставки нет.</p>
+    <table>
+      <tr><td>Explorer — 10 планов, 15 генераций и 30 адаптаций в день, совместное планирование, без рекламы — 1 месяц</td><td>329 ₽</td></tr>
+      <tr><td>Voyager — 20 планов, 30 генераций и 60 адаптаций в день, совместное планирование, без рекламы — 1 месяц</td><td>489 ₽</td></tr>
+      <tr><td>Voyager — 1 год</td><td>4 899 ₽</td></tr>
+      <tr><td>«Отключить рекламу» на бесплатном тарифе, +3 генерации и +3 адаптации в день — 1 месяц</td><td>159 ₽</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Оплата и получение</h2>
+    <ul>
+      <li>Оплата картой российского банка, через СБП или SberPay на странице ЮKassa. Данные карты вводятся только там и продавцу не передаются.</li>
+      <li>Оплата разовая, без автопродления: когда оплаченный срок закончится, тариф можно оплатить снова.</li>
+      <li>Тариф включается в вашем аккаунте Roamvas сразу после оплаты — на сайте и в приложении, где вы вошли в этот аккаунт.</li>
+      <li>Чек об оплате продавец формирует в приложении «Мой налог» и отправляет на электронную почту вашего аккаунта Roamvas.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Возврат</h2>
+    <p>Если тариф не включился или оплата прошла по ошибке, напишите на <a href="mailto:support@roamvas.app">support@roamvas.app</a> и укажите почту или логин аккаунта и дату оплаты. Обращения рассматриваются в соответствии с законодательством Российской Федерации; деньги возвращаются тем же способом, которым была сделана оплата.</p>
+  </div>
+
+  <div class="card">
+    <h2>Документы</h2>
+    <ul>
+      <li><a href="https://roamvas.app/#/legal/terms">Условия использования (оферта)</a></li>
+      <li><a href="https://roamvas.app/#/legal/privacy">Политика конфиденциальности</a></li>
+      <li><a href="https://roamvas.app/#/pricing">Тарифы</a></li>
+    </ul>
+  </div>
+</main>
+</body>
+</html>

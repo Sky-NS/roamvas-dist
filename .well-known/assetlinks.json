@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.roamvas",
+      "sha256_cert_fingerprints": [
+        "C3:C8:12:83:42:81:2D:83:5B:B4:41:13:10:BD:90:05:3D:55:D8:0D:22:92:DB:CB:63:51:C8:67:60:73:EC:FF",
+        "FA:3E:7A:E2:1B:07:CE:89:23:45:DC:2A:BB:33:10:63:46:F0:95:18:55:2E:36:41:71:30:51:2A:5B:69:FD:D8"
+      ]
+    }
+  }
+]

@@ -1,0 +1,1 @@
+import{aR as s,aS as r}from"./index-CRCwTrHP.js";const o=s()(r(a=>({panelToken:"",role:"",daysUntilExpiry:null,setPanelSession:({panelToken:e,role:n,daysUntilExpiry:l})=>a({panelToken:e,role:n,daysUntilExpiry:l}),updateDaysUntilExpiry:e=>a({daysUntilExpiry:e}),clearPanelSession:()=>a({panelToken:"",role:"",daysUntilExpiry:null})}),{name:"roamvas-panel"}));export{o as u};

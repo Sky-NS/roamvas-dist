@@ -1,0 +1,1 @@
+import{registerPlugin as n}from"./index-C7nSr84o.js";import"./index-CRCwTrHP.js";n("PushNotifications",{});async function r(){return!1}async function e(){return!1}function u(){}export{e as enablePush,u as initPush,r as pushPermitted};
